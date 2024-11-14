@@ -2,5 +2,5 @@
 
 - Configuração inicial do Nest + TypeORM + Swagger + Docker @done
 - Implementar Login @done
-- Criar a lógica do module customers
-- Criar lógica de user e auth
+- Criar a lógica do module customers @done
+- Criar lógica de user e auth @done
