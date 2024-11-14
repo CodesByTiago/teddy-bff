@@ -48,3 +48,25 @@ JWT_SECRET=COLOQUE AQUI O SEU JWT SECRET
 4 - Rode o comando para executar os containers e subir o banco: `docker compose up -d`
 3 - Rode o projeto executando o comando: `npm run start:dev` <br />
 ```
+
+**PgAdmin: localhost:5050**
+
+Acesso a documentaçao com Swagger
+
+```
+Acessar a rota: localhost/api
+```
+
+**PgAdmin: localhost:5050**
+
+Ao abrir o PgAdmin usar as seguintes informações:
+
+```
+Aba Geral
+ - Nome: O de sua escolha
+
+Aba Conexão
+ - Host name/address: db
+ - Username: teddy
+ - Senha: teddy
+```
