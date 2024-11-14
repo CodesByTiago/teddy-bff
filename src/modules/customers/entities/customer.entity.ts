@@ -12,11 +12,11 @@ export class Customer {
   @Column()
   name: string;
 
-  @Column('decimal')
-  salary: number;
+  @Column()
+  salary: string;
 
-  @Column('decimal')
-  companyValue: number;
+  @Column()
+  companyValue: string;
 
   @ManyToOne(() => User, (user) => user.customers)
   user: User;

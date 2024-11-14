@@ -14,6 +14,11 @@ async function bootstrap() {
     }),
   );
 
+  app.enableCors({
+    origin: 'http://localhost:8080',
+    credentials: true,
+  });
+
   const config = new DocumentBuilder()
     .setTitle('Teddy API Project')
     .setVersion('1.0')

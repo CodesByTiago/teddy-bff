@@ -22,7 +22,7 @@ export class AuthService {
 
     if (user) {
       throw new HttpException(
-        `E-mail: ${user.email} já está cadastrado!`,
+        'Usuário já está cadastrado!',
         HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
@@ -40,7 +40,7 @@ export class AuthService {
   ): Promise<{ access_token: string; user: any }> {
     const user = await this.usersService.findByEmail(email);
     if (!user) {
-      throw new UnauthorizedException('Usuário não econtrado!');
+      throw new UnauthorizedException('Usuário não encontrado!');
     }
 
     const comparePass = await bcrypt.compare(pass, user.password);

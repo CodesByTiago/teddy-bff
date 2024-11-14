@@ -5,10 +5,10 @@ export class CreateCustomertDTO {
   readonly name: string;
 
   @IsString()
-  readonly salary: number;
+  readonly salary: string;
 
   @IsString()
-  readonly companyValue: number;
+  readonly companyValue: string;
 
   @IsString()
   readonly userId: string;
