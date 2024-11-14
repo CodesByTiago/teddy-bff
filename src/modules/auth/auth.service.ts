@@ -34,7 +34,10 @@ export class AuthService {
     });
   }
 
-  async signIn(email: string, pass: string): Promise<{ access_token: string }> {
+  async signIn(
+    email: string,
+    pass: string,
+  ): Promise<{ access_token: string; user: any }> {
     const user = await this.usersService.findByEmail(email);
     if (!user) {
       throw new UnauthorizedException('Usuário não econtrado!');
@@ -48,6 +51,7 @@ export class AuthService {
     const payload = { email: user.email, sub: user.id };
     return {
       access_token: await this.jwtService.signAsync(payload),
+      user,
     };
   }
 }
